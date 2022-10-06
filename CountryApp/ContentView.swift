@@ -11,14 +11,17 @@ struct ContentView: View {
     @StateObject var countries = Countries()
     
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            Text("Loading")
+            List(countries.countries) { country in
+                Text(country.name)
+            }
+            .task {
+                await countries.loadData()
+            }
         }
-        .padding()
     }
+        
 }
 
 struct ContentView_Previews: PreviewProvider {
