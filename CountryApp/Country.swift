@@ -7,6 +7,13 @@
 
 import Foundation
 
-struct Country {
+struct Country: Decodable, Identifiable {
+    var id = UUID()
     let name: String
+    let independent: Bool
+    
+    private enum CodingKeys: String, CodingKey {
+            case name, independent
+        }
+    
 }

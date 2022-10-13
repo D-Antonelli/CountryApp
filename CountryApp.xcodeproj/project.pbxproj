@@ -11,9 +11,9 @@
 		8A5EB32428EECDCB00107575 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5EB32328EECDCB00107575 /* ContentView.swift */; };
 		8A5EB32628EECDCD00107575 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A5EB32528EECDCD00107575 /* Assets.xcassets */; };
 		8A5EB32928EECDCD00107575 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A5EB32828EECDCD00107575 /* Preview Assets.xcassets */; };
-		8A5EB34228EED82000107575 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5EB34128EED82000107575 /* Country.swift */; };
-		8A5EB34428EED83D00107575 /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5EB34328EED83D00107575 /* Countries.swift */; };
 		8A5EB34628EED9DF00107575 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8A5EB34528EED9DF00107575 /* .gitignore */; };
+		8A5EB34828EF030C00107575 /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5EB34728EF030C00107575 /* Countries.swift */; };
+		8A5EB34A28EF033500107575 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5EB34928EF033500107575 /* Country.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,9 +22,9 @@
 		8A5EB32328EECDCB00107575 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8A5EB32528EECDCD00107575 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A5EB32828EECDCD00107575 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		8A5EB34128EED82000107575 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Country.swift; path = ../Country.swift; sourceTree = "<group>"; };
-		8A5EB34328EED83D00107575 /* Countries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Countries.swift; path = ../Countries.swift; sourceTree = "<group>"; };
 		8A5EB34528EED9DF00107575 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		8A5EB34728EF030C00107575 /* Countries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
+		8A5EB34928EF033500107575 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Country.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,12 +58,12 @@
 			isa = PBXGroup;
 			children = (
 				8A5EB32128EECDCB00107575 /* CountryAppApp.swift */,
-				8A5EB33E28EED7B100107575 /* data */,
-				8A5EB33928EED73C00107575 /* modelView */,
 				8A5EB32328EECDCB00107575 /* ContentView.swift */,
 				8A5EB32528EECDCD00107575 /* Assets.xcassets */,
 				8A5EB32728EECDCD00107575 /* Preview Content */,
 				8A5EB34528EED9DF00107575 /* .gitignore */,
+				8A5EB34728EF030C00107575 /* Countries.swift */,
+				8A5EB34928EF033500107575 /* Country.swift */,
 			);
 			path = CountryApp;
 			sourceTree = "<group>";
@@ -74,24 +74,6 @@
 				8A5EB32828EECDCD00107575 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		8A5EB33928EED73C00107575 /* modelView */ = {
-			isa = PBXGroup;
-			children = (
-				8A5EB34328EED83D00107575 /* Countries.swift */,
-			);
-			name = modelView;
-			path = ../../../Desktop/modelView;
-			sourceTree = "<group>";
-		};
-		8A5EB33E28EED7B100107575 /* data */ = {
-			isa = PBXGroup;
-			children = (
-				8A5EB34128EED82000107575 /* Country.swift */,
-			);
-			name = data;
-			path = ../../../Desktop/data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,9 +147,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A5EB34A28EF033500107575 /* Country.swift in Sources */,
 				8A5EB32428EECDCB00107575 /* ContentView.swift in Sources */,
-				8A5EB34228EED82000107575 /* Country.swift in Sources */,
-				8A5EB34428EED83D00107575 /* Countries.swift in Sources */,
+				8A5EB34828EF030C00107575 /* Countries.swift in Sources */,
 				8A5EB32228EECDCB00107575 /* CountryAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

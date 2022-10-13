@@ -8,20 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var countries = Countries()
+    @State var countries = [Country]()
     
     var body: some View {
         NavigationView {
-            Text("Loading")
-            List(countries.countries) { country in
+            List(countries) { country in
                 Text(country.name)
             }
-            .task {
-                await countries.loadData()
+        }
+        .onAppear() {
+            apiCall().loadData { countries in
+                self.countries = countries
             }
         }
     }
-        
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
