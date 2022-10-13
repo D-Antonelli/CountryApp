@@ -14,9 +14,9 @@ struct ContentView: View {
         NavigationView {
             List(countries.countries) { country in
                 NavigationLink {
-                    Text("Detail view for \(country.name)")
+                    DetailView()
                 } label: {
-                    Text(country.name)
+                    Text("\(country.name)")
                 }
                 
             }

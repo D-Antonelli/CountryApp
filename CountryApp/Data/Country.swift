@@ -10,10 +10,10 @@ import Foundation
 struct Country: Decodable, Identifiable {
     var id = UUID()
     let name: String
-    let independent: Bool
+    let capital: String
     
     private enum CodingKeys: String, CodingKey {
-            case name, independent
+        case name, capital
         }
     
 }
