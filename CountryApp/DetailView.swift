@@ -31,9 +31,17 @@ struct DetailView: View {
                     Divider()
                         .padding(.bottom)
                     
+                    Text("Capital")
+                        .font(.title.bold())
+                    Text("\(country.unwrappedCapital)")
+                        .padding(.bottom)
+                    
                     Text("Population")
-                        .font(.title2)
+                        .font(.title.bold())
                     Text("\(country.population)")
+                        .padding(.bottom)
+                    
+                   
                     
                 }
             }
