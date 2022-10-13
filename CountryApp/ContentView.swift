@@ -13,8 +13,14 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(countries) { country in
-                Text(country.name)
+                NavigationLink {
+                    Text("Detail view for \(country.name)")
+                } label: {
+                    Text(country.name)
+                }
+                
             }
+            .navigationTitle("Countries")
         }
         .onAppear() {
             apiCall().loadData { countries in
