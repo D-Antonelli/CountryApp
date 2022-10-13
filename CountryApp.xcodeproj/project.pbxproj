@@ -14,6 +14,7 @@
 		8A5EB34628EED9DF00107575 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8A5EB34528EED9DF00107575 /* .gitignore */; };
 		8A5EB34828EF030C00107575 /* apiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5EB34728EF030C00107575 /* apiCall.swift */; };
 		8A5EB34A28EF033500107575 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5EB34928EF033500107575 /* Country.swift */; };
+		8A9203C928F80A8100573154 /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9203C828F80A8100573154 /* Countries.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		8A5EB34528EED9DF00107575 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		8A5EB34728EF030C00107575 /* apiCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiCall.swift; sourceTree = "<group>"; };
 		8A5EB34928EF033500107575 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Country.swift; sourceTree = "<group>"; };
+		8A9203C828F80A8100573154 /* Countries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,13 +59,14 @@
 		8A5EB32028EECDCB00107575 /* CountryApp */ = {
 			isa = PBXGroup;
 			children = (
-				8A5EB32128EECDCB00107575 /* CountryAppApp.swift */,
-				8A5EB32328EECDCB00107575 /* ContentView.swift */,
-				8A5EB32528EECDCD00107575 /* Assets.xcassets */,
+				8A9203C528F809F100573154 /* Data */,
+				8A9203C628F80A0000573154 /* Functions */,
+				8A9203C728F80A1800573154 /* Views */,
 				8A5EB32728EECDCD00107575 /* Preview Content */,
+				8A5EB32528EECDCD00107575 /* Assets.xcassets */,
+				8A5EB32128EECDCB00107575 /* CountryAppApp.swift */,
 				8A5EB34528EED9DF00107575 /* .gitignore */,
-				8A5EB34728EF030C00107575 /* apiCall.swift */,
-				8A5EB34928EF033500107575 /* Country.swift */,
+				8A9203CA28F80A9100573154 /* ModelView */,
 			);
 			path = CountryApp;
 			sourceTree = "<group>";
@@ -74,6 +77,38 @@
 				8A5EB32828EECDCD00107575 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8A9203C528F809F100573154 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8A5EB34928EF033500107575 /* Country.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8A9203C628F80A0000573154 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				8A5EB34728EF030C00107575 /* apiCall.swift */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
+		8A9203C728F80A1800573154 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8A5EB32328EECDCB00107575 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8A9203CA28F80A9100573154 /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+				8A9203C828F80A8100573154 /* Countries.swift */,
+			);
+			path = ModelView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +186,7 @@
 				8A5EB32428EECDCB00107575 /* ContentView.swift in Sources */,
 				8A5EB34828EF030C00107575 /* apiCall.swift in Sources */,
 				8A5EB32228EECDCB00107575 /* CountryAppApp.swift in Sources */,
+				8A9203C928F80A8100573154 /* Countries.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

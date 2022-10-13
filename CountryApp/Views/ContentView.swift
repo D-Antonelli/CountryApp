@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var countries = [Country]()
+    @StateObject private var countries = Countries()
     
     var body: some View {
         NavigationView {
-            List(countries) { country in
+            List(countries.countries) { country in
                 NavigationLink {
                     Text("Detail view for \(country.name)")
                 } label: {
@@ -21,11 +21,6 @@ struct ContentView: View {
                 
             }
             .navigationTitle("Countries")
-        }
-        .onAppear() {
-            apiCall().loadData { countries in
-                self.countries = countries
-            }
         }
     }
     
