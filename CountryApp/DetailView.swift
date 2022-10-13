@@ -12,18 +12,42 @@ struct DetailView: View {
     
     var body: some View {
         GeometryReader { geometry in
-            VStack {
-                Text("Capital")
-                Text("\(country.unwrappedCapital)")
+            ScrollView {
+                VStack(alignment: .center) {
+                    AsyncImage(url: country.flags.png) { image in
+                        image.resizable()
+                            .scaledToFit()
+                            .padding(.top)
+                    } placeholder: {
+                        ProgressView()
+                    }
+                    .frame(maxWidth: geometry.size.width * 0.5)
+                    
+                    Text("\(country.name)")
+                        .font(.title2)
+                        .padding(.top)
+                        .foregroundColor(.secondary)
+                    
+                    Divider()
+                        .padding(.bottom)
+                    
+                    Text("Population")
+                        .font(.title2)
+                    Text("\(country.population)")
+                    
+                }
             }
+            
+            
         }
+        .navigationTitle("\(country.name)")
+        .navigationBarTitleDisplayMode(.inline)
         
-        .navigationTitle("\(country.name)").navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(country: Country(name: "Wonderland", capital: "Wonder city", population: 1, denonym: "Wonder", flags: Country.Flag(png: URL(string: "www.flag.com")!), currencies: [Country.Currency(name: "WDL")]))
+        DetailView(country: Country(name: "Wonderland", capital: "Wonder city", population: 1, denonym: "Wonder", flags: Country.Flag(png: URL(string: "https://flagcdn.com/w320/ax.png")!), currencies: [Country.Currency(name: "WDL")]))
     }
 }
