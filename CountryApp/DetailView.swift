@@ -8,17 +8,22 @@
 import SwiftUI
 
 struct DetailView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+    let country: Country
     
-    init() {
-//        print("Detail view initialized and making api call")
+    var body: some View {
+        GeometryReader { geometry in
+            VStack {
+                Text("Capital")
+                Text("\(country.unwrappedCapital)")
+            }
+        }
+        
+        .navigationTitle("\(country.name)").navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView()
+        DetailView(country: Country(name: "Wonderland", capital: "Wonder city", population: 1, denonym: "Wonder", flags: Country.Flag(png: URL(string: "www.flag.com")!), currencies: [Country.Currency(name: "WDL")]))
     }
 }
